@@ -1,0 +1,11 @@
+[Unit]
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/usr/local/mtproxy/bin
+ExecStart=/usr/local/mtproxy/bin/mtproto-proxy -vv -P <%= @proxy_tag %> -u nobody -p <%= @stats_port%> -H <%= @port %> -S <%= @proxy_secret %> --aes-pwd /usr/local/mtproxy/misc/proxy-secret /usr/local/mtproxy/misc/proxy-config
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

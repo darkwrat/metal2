@@ -1,0 +1,8 @@
+---
+nodes:
+  - name: hel1
+    config:
+      transport: ssh
+      ssh:
+        host-key-check: true
+        port: 22

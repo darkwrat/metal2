@@ -1,0 +1,16 @@
+---
+version: 5
+hierarchy:
+  - name: "Hierarchy"
+    lookup_key: eyaml_lookup_key
+    paths:
+      - "%{::fqdn}.yaml"
+      - "os/%{facts.os.family}.yaml"
+      - "default.yaml"
+    options:
+      pkcs7_private_key: /opt/eyamlkeys/private_key.pkcs7.pem
+      pkcs7_public_key: /opt/eyamlkeys/public_key.pkcs7.pem
+
+defaults:
+  data_hash: yaml_data
+  datadir: hieradata
