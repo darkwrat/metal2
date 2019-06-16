@@ -8,11 +8,11 @@ class mtproxy::miscellaneous(
     recurse => true,
   }
 
-  exec { "/usr/bin/curl -s ${secret_url} -o /usr/local/mtproxy/misc/proxy-secret" :
+  exec { "/usr/bin/curl -s \"${secret_url}\" -o /usr/local/mtproxy/misc/proxy-secret" :
     creates => '/usr/local/mtproxy/misc/proxy-secret',
   }
 
-  $curl_config = "/usr/bin/curl -s ${config_url} -o /usr/local/mtproxy/misc/proxy-config"
+  $curl_config = "/usr/bin/curl -s \"${config_url}\" -o /usr/local/mtproxy/misc/proxy-config"
 
   exec { $curl_config :
     creates => '/usr/local/mtproxy/misc/proxy-config',
@@ -21,7 +21,7 @@ class mtproxy::miscellaneous(
   cron { 'mtproxy-config':
     command => $curl_config,
     user => 'root',
-    hour => 0,
+    hour => 2,
     minute => 0,
   }
 
