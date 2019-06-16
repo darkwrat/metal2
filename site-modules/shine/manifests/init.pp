@@ -1,5 +1,5 @@
 class shine(
-  Boolean $enable = false,
+  Boolean $enable = true,
 ) {
 
   yumrepo { 'shine-local' :

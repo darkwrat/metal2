@@ -3,7 +3,6 @@ classes:
   - sysctl
   - ntp
   - firewall
-  - shine
 
 sysctl:
   fs.suid_dumpable: 1

@@ -1,6 +1,6 @@
 class mtproxy::service(
-    Boolean $enable = false,
-    String $ensure = 'stopped',
+    Boolean $enable = true,
+    String $ensure = 'running',
     Integer $port = 8002,
     Integer $stats_port = 8012,
     String $proxy_secret,
