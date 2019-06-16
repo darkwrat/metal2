@@ -3,8 +3,11 @@ classes:
   - sysctl
   - ntp
   - firewall
+  - timezone
 
 sysctl:
   fs.suid_dumpable: 1
   net.ipv4.tcp_timestamps: 1
   net.ipv4.tcp_tw_reuse: 1
+
+timezone::timezone: 'Europe/Moscow'
