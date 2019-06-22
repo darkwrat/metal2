@@ -19,3 +19,4 @@ justpkg::installed:
     'vim':         { ensure: 'present' }
     'tmux':        { ensure: 'present' }
     'tree':        { ensure: 'present' }
+    'git':         { ensure: 'present' }
