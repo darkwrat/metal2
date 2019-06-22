@@ -1,9 +1,11 @@
 ---
 classes:
+  - justpkg
   - sysctl
   - ntp
   - firewall
   - timezone
+  - locate
 
 sysctl:
   fs.suid_dumpable: 1
@@ -12,3 +14,6 @@ sysctl:
   net.ipv4.tcp_sack: 0
 
 timezone::timezone: 'Europe/Moscow'
+
+justpkg::installed:
+    'vim':         { ensure: 'present' }
