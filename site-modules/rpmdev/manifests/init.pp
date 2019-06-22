@@ -9,6 +9,11 @@ class rpmdev(
     user => 'root',
     environment => ["HOME=/root"],
     creates => '/root/rpmbuild',
+  }->
+  file { '/root/rpmbuild' :
+    ensure => 'directory',
+    source => 'puppet:///modules/rpmdev/rpmbuild',
+    recurse => true,
   }
 
 }
