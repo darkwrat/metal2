@@ -20,3 +20,4 @@ justpkg::installed:
     'tmux':        { ensure: 'present' }
     'tree':        { ensure: 'present' }
     'git':         { ensure: 'present' }
+    'wget':        { ensure: 'present' }

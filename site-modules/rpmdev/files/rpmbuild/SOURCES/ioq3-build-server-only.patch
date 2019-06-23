@@ -1,0 +1,38 @@
+--- Makefile.orig	2019-06-23 03:32:49.196251498 +0300
++++ Makefile	2019-06-23 03:33:58.557819885 +0300
+@@ -12,28 +12,28 @@
+ endif
+ 
+ ifndef BUILD_STANDALONE
+-  BUILD_STANDALONE =
++  BUILD_STANDALONE = 0
+ endif
+ ifndef BUILD_CLIENT
+-  BUILD_CLIENT     =
++  BUILD_CLIENT     = 0
+ endif
+ ifndef BUILD_SERVER
+   BUILD_SERVER     =
+ endif
+ ifndef BUILD_GAME_SO
+-  BUILD_GAME_SO    =
++  BUILD_GAME_SO    = 0
+ endif
+ ifndef BUILD_GAME_QVM
+-  BUILD_GAME_QVM   =
++  BUILD_GAME_QVM   = 0
+ endif
+ ifndef BUILD_BASEGAME
+-  BUILD_BASEGAME =
++  BUILD_BASEGAME = 0
+ endif
+ ifndef BUILD_MISSIONPACK
+-  BUILD_MISSIONPACK=
++  BUILD_MISSIONPACK=0
+ endif
+ ifndef BUILD_RENDERER_OPENGL2
+-  BUILD_RENDERER_OPENGL2=
++  BUILD_RENDERER_OPENGL2=0
+ endif
+ ifndef BUILD_AUTOUPDATER  # DON'T build unless you mean to!
+   BUILD_AUTOUPDATER=0

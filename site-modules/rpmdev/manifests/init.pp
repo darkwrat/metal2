@@ -14,6 +14,7 @@ class rpmdev(
     ensure => 'directory',
     source => 'puppet:///modules/rpmdev/rpmbuild',
     recurse => true,
+    seluser => 'unconfined_u',
   }
 
 }

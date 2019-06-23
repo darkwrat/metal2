@@ -1,0 +1,55 @@
+--- Makefile.orig	2019-06-23 03:58:37.244638151 +0300
++++ Makefile	2019-06-23 03:59:29.680513637 +0300
+@@ -1362,44 +1362,6 @@
+ # Create the build directories, check libraries and print out
+ # an informational message, then start building
+ targets: makedirs
+-	@echo ""
+-	@echo "Building in $(B):"
+-	@echo "  PLATFORM: $(PLATFORM)"
+-	@echo "  ARCH: $(ARCH)"
+-	@echo "  VERSION: $(VERSION)"
+-	@echo "  COMPILE_PLATFORM: $(COMPILE_PLATFORM)"
+-	@echo "  COMPILE_ARCH: $(COMPILE_ARCH)"
+-	@echo "  HAVE_VM_COMPILED: $(HAVE_VM_COMPILED)"
+-	@echo "  PKG_CONFIG: $(PKG_CONFIG)"
+-	@echo "  CC: $(CC)"
+-ifeq ($(PLATFORM),mingw32)
+-	@echo "  WINDRES: $(WINDRES)"
+-endif
+-	@echo ""
+-	@echo "  CFLAGS:"
+-	$(call print_wrapped, $(CFLAGS) $(OPTIMIZE))
+-	@echo ""
+-	@echo "  CLIENT_CFLAGS:"
+-	$(call print_wrapped, $(CLIENT_CFLAGS))
+-	@echo ""
+-	@echo "  SERVER_CFLAGS:"
+-	$(call print_wrapped, $(SERVER_CFLAGS))
+-	@echo ""
+-	@echo "  LDFLAGS:"
+-	$(call print_wrapped, $(LDFLAGS))
+-	@echo ""
+-	@echo "  LIBS:"
+-	$(call print_wrapped, $(LIBS))
+-	@echo ""
+-	@echo "  CLIENT_LIBS:"
+-	$(call print_wrapped, $(CLIENT_LIBS))
+-	@echo ""
+-	@echo "  AUTOUPDATER_LIBS:"
+-	$(call print_wrapped, $(AUTOUPDATER_LIBS))
+-	@echo ""
+-	@echo "  Output:"
+-	$(call print_list, $(NAKED_TARGETS))
+-	@echo ""
+ ifneq ($(TARGETS),)
+   ifndef DEBUG_MAKEFILE
+ 	@$(MAKE) $(TARGETS) $(B).zip V=$(V)
+@@ -2869,7 +2831,6 @@
+ 
+ 
+ copyfiles: release
+-	@if [ ! -d $(COPYDIR)/$(BASEGAME) ]; then echo "You need to set COPYDIR to where your Quake3 data is!"; fi
+ ifneq ($(BUILD_GAME_SO),0)
+   ifneq ($(BUILD_BASEGAME),0)
+ 	-$(MKDIR) -m 0755 $(COPYDIR)/$(BASEGAME)
