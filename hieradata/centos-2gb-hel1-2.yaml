@@ -3,6 +3,7 @@ classes:
   - shine
   - mtproxy
   - rpmdev
+  - ioq3
 
 mtproxy::install::version: '1-1.el7'
 mtproxy::service::proxy_secret: 'ENC[PKCS7,MIIBmQYJKoZIhvcNAQcDoIIBijCCAYYCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEASRdE/IEmohutqRfKWAtOJqfzgoCT5KraS5pCTSGDJflOLIGM757+zHUau5wsm9/qGOJfLyX+MKpCQdGH8STjPUnuwbFxNEDwg32kinudtjZLjKtpC+qYPT/+uKF8aKkxomWRNpu6JI4KfhmGUT1cHItH1qHKqBZvMYgouSMZut1HEjYgIxPGgaqSP0wPbfnziFQfyu71V1mIC/7yO7lodWOG2/6Bc2t6CDddacvzzaFo4hX6AWr4HSkoOsNTWru10HmNtNvQYG/chz5RUS2rU/Zp92gFKHDZEmzjehJ0xLL40mGzEleXB3Mpe0fDbKizs6vgsG3dM4JL1z0itdrlkjBcBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBCjJFV4dhd01CFiXE389uvegDDZlUB8h3VNWy0MTYUFW0vdT+qMOswj3d+TOE6t7Yhn3gviDH5grh1vX7JKwWy6xRI=]'
@@ -21,3 +22,5 @@ justpkg::installed:
     'patch':          { ensure: 'present' }
     'zlib-devel':     { ensure: 'present' }
     'openssl-devel':  { ensure: 'present' }
+
+ioq3::install::version: '1-350b8f9.el7'
