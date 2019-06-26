@@ -6,6 +6,7 @@ classes:
   - firewall
   - timezone
   - locate
+  - epel
 
 sysctl:
   fs.suid_dumpable: 1
