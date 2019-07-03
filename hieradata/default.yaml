@@ -21,4 +21,4 @@ justpkg::installed:
     'tree':        { ensure: 'present' }
     'git':         { ensure: 'present' }
     'wget':        { ensure: 'present' }
-    'bind-utild':  { ensure: 'present' }
+    'bind-utils':  { ensure: 'present' }
