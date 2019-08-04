@@ -3,8 +3,8 @@ class mtproxy::service(
     String $ensure = 'running',
     Integer $port = 8002,
     Integer $stats_port = 8012,
-    Sensitive[String] $proxy_secret,
-    Sensitive[String] $proxy_tag,
+    String $proxy_secret,
+    String $proxy_tag,
 ) {
 
   file { '/usr/lib/systemd/system/mtproxy.service' :
